@@ -13,7 +13,16 @@ async function firstReqAPI() {
 
     try {
         
-        let response = axios.get(`${BASE_URL}/cocktails/?r=${requestCards}`);
+        // let response = axios.get(`${BASE_URL}/cocktails/?r=${requestCards}`);
+
+        fetch(`${BASE_URL}/cocktails/?r=${requestCards}`)
+        .then(response => {
+        if (!response.ok) {
+      throw new Error(response.status);
+    }
+    return response.json();
+  })
+
         return response.data;
 
     }
