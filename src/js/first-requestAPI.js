@@ -14,6 +14,7 @@ async function firstReqAPI() {
     try {
         
         let response = axios.get(`${BASE_URL}/cocktails/?r=${requestCards}`);
+        return response.data;
 
     }
     catch {
