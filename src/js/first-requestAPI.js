@@ -1,35 +1,48 @@
 
+// const BASE_URL = "https://drinkify.b.goit.study/api/v1";
 
-const BASE_URL = "https://drinkify.b.goit.study/api/v1";
+// async function firstReqAPI() {
 
-async function firstReqAPI() {
+//     // ? вираховуємо ширину в*юпорта користувача 
+//     let widthWindowUser = document.documentElement.clientWidth;
+//     console.log(widthWindowUser);
+//     // ? вираховуємо ширину в*юпорта користувача
 
-    // ? вираховуємо ширину в*юпорта користувача 
-    let widthWindowUser = document.documentElement.clientWidth;
-    console.log(widthWindowUser);
-    // ? вираховуємо ширину в*юпорта користувача
+//     let requestCards = (widthWindowUser > 1280) ? 9: 8;  
 
-    let requestCards = (widthWindowUser > 1280) ? 9: 8;  
-
-    try {
+//     try {
         
-        // let response = axios.get(`${BASE_URL}/cocktails/?r=${requestCards}`);
+//         // let response = axios.get(`${BASE_URL}/cocktails/?r=${requestCards}`);
 
-        fetch(`${BASE_URL}/cocktails/?r=${requestCards}`)
-        .then(response => {
-        if (!response.ok) {
-      throw new Error(response.status);
-    }
-    return response.json();
-  })
+//       await  fetch(`${BASE_URL}/cocktails/?r=${requestCards}`)
+//         .then(response => {
+//         if (!response.ok) {
+//       throw new Error(response.status);
+//             }
+//             const resp = response
+//             console.log(response)
+//         return  resp;
+//   })
 
-        return response.data;
+  
 
-    }
-    catch {
-        console.error(error.message)
-    }
+//     }
+//     catch {
+//         console.error(error.message)
+//     }
 
-};
+// };
 
-export { firstReqAPI };
+
+// renderMarkup()
+
+// async function renderMarkup() {
+//     try {
+// const resp = await firstReqAPI();
+// console.log(resp)
+//     }
+//     catch {
+//         console.error(error.message)
+//     }
+// }
+
