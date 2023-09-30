@@ -85,16 +85,16 @@ border-radius: 16px;
 
 .cocktails__item__description{
     max-width: 296px;
-
     margin: 0; 
     -webkit-line-clamp: 3; 
     display: -webkit-box; 
     -webkit-box-orient: vertical; 
     overflow: hidden; 
+
 }
 
 
-.cocktails__item__btn{
+.cocktails__btn__container{
     height: 48px;
     display: flex;
     justify-content:start;
@@ -141,5 +141,11 @@ background: #7E8FDD;
     width: 18px;
     height: 18px;
 
-fill:transparent
+}
+.addFavorites_js{
+    fill:transparent
+
+}
+.removeFavorites_js{
+    fill: #FDFDFF; 
 }

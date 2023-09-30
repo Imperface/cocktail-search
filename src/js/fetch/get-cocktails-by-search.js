@@ -1,16 +1,6 @@
 // реалізувати запит на сервер. З файлу search-query треба імпортувати рядок для пошукового запиту. Зробити іменований експорт масиву з об'єктами коктейлів, відповідно до пошукового запиту
 
 
-
-// import {renderCocktailsList} from '../render/render-coctails-cards';
-// EXPORT
-function renderingCardDependency() {
-    let widthWindowUser = document.documentElement.clientWidth;
-    let requestCards = (widthWindowUser > 1280) ? 9 : 8;
-    return requestCards
-};
-
-
 let query ='';
 
 const BASE_URL = 'https://drinkify.b.goit.study/api/v1/cocktails/search/';
@@ -34,11 +24,19 @@ if(query.length===1){
 const searchForm = document.querySelector('.search__form');
 const cocktailsList = document.querySelector('.cocktails__list');
 const titleRemove = document.querySelector('.search__title');
+const learnMoreBtn = document.querySelector('.learnmore__btn');
+const svgBtn = document.querySelector('.svg__btn');
+
+const itemBtnContainer = document.querySelector('.cocktails__btn__container');
 
 titleRemove.style.display = 'none';
 
 
 searchForm.addEventListener('submit', createImgCards);
+
+if (itemBtnContainer) {
+  itemBtnContainer.addEventListener('click',changeEvents)
+ }
 
 async function createImgCards(event) {
 event.preventDefault();
@@ -51,11 +49,6 @@ const data = await fetchImage();
 data.length = renderingCardDependency();
 titleRemove.style.display = 'block';
 renderCocktailsList(data);
-
-if(data.length > renderingCardDependency()){
-    console.log(data.length)
-}
-
 }
 catch (error) {
 console.log(error.message);
@@ -68,19 +61,53 @@ cocktailsList.innerHTML += images.map(image => `
 <img class="cocktails__item__img" src=${image.drinkThumb} alt=${image.drink}>
 <h3 class="cocktails__item__header">${image.drink}</h3>
 <p class="cocktails__item__description">${image.description}</p>
-<div class="cocktails__item__btn">
+<div class="cocktails__btn__container">
 <button type="button" class="learnmore__btn">learn more</button>
-<button type="button"  class="svg__btn">
-  <svg class="svg-heart">
-      <use class="cocktails__svg" href="./img/sprite.svg#icon-heart"></use>
-  </svg>
+<button type="button"  class="svg__btn"> 
+ <svg class="svg-heart">
+<use class="cocktails__svg addFavorites_js" href="./img/sprite.svg#icon-heart"></use>
+</svg>
 </button>
-</div>   
-</li>`)
-.join('')
+</div> 
+</li>
+`)
+.join('');
+
 }
+function renderingCardDependency() {
+  let widthWindowUser = document.documentElement.clientWidth;
+  let requestCards = (widthWindowUser > 1280) ? 9 : 8;
+  return requestCards
+};
+
 
 function clearCocktailsList(){
 cocktailsList.innerHTML = '';
 }
 
+function changeEvents(event){
+    const target = event.target;
+    if (target.classList.contains('learnmore__btn')) {
+    console.log("Open modal");
+
+  } else if (target.classList.contains('svg__btn')) {
+    console.log("Add to favorites");
+  }}
+
+
+// }    // const clickButton = event.target;
+    // const cocktailItem = clickButton.closest('.cocktails__item');
+  
+    // if (cocktailItem) {
+    //   const cocktailData = {
+    //     name: cocktailItem.querySelector('.cocktails__item__header').textContent,
+    //     description: cocktailItem.querySelector('.cocktails__item__description').textContent,
+    //     imageSrc: cocktailItem.querySelector('.cocktails__item__img').src,
+    //   };
+  
+    //   const cocktailDataJSON = JSON.stringify(cocktailData);
+  
+    //   localStorage.setItem('cocktail:', cocktailDataJSON);
+    //   console.log(cocktailDataJSON);
+  
+    // }
