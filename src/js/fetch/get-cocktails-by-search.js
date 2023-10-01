@@ -27,7 +27,7 @@ const titleRemove = document.querySelector('.search__title');
 const learnMoreBtn = document.querySelector('.learnmore__btn');
 const svgBtn = document.querySelector('.svg__btn');
 
-const itemBtnContainer = document.querySelector('.cocktails__btn__container');
+const itemBtnContainer = document.querySelectorAll('.cocktails__btn__container');
 
 titleRemove.style.display = 'none';
 
@@ -35,8 +35,9 @@ titleRemove.style.display = 'none';
 searchForm.addEventListener('submit', createImgCards);
 
 if (itemBtnContainer) {
-  itemBtnContainer.addEventListener('click',changeEvents)
- }
+  itemBtnContainer.forEach(button => {
+  button.addEventListener('click', changeEvents);
+})};
 
 async function createImgCards(event) {
 event.preventDefault();
@@ -57,7 +58,7 @@ console.log(error.message);
 
 function renderCocktailsList(images) {
 cocktailsList.innerHTML += images.map(image => `
-<li class="cocktails__item">
+<li class="cocktails__item" id = ${image._id}>
 <img class="cocktails__item__img" src=${image.drinkThumb} alt=${image.drink}>
 <h3 class="cocktails__item__header">${image.drink}</h3>
 <p class="cocktails__item__description">${image.description}</p>
@@ -91,23 +92,33 @@ function changeEvents(event){
     console.log("Open modal");
 
   } else if (target.classList.contains('svg__btn')) {
+    addToFavorites();
     console.log("Add to favorites");
   }}
 
+function getFavorites() {
+  const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+  return favorites;
+}
+function saveFavorites(favorites) {
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+}
 
-// }    // const clickButton = event.target;
-    // const cocktailItem = clickButton.closest('.cocktails__item');
-  
-    // if (cocktailItem) {
-    //   const cocktailData = {
-    //     name: cocktailItem.querySelector('.cocktails__item__header').textContent,
-    //     description: cocktailItem.querySelector('.cocktails__item__description').textContent,
-    //     imageSrc: cocktailItem.querySelector('.cocktails__item__img').src,
-    //   };
-  
-    //   const cocktailDataJSON = JSON.stringify(cocktailData);
-  
-    //   localStorage.setItem('cocktail:', cocktailDataJSON);
-    //   console.log(cocktailDataJSON);
-  
-    // }
+function addToFavorites(event) {
+  const card = event.target.parentElement;
+  const cocktailData = {
+    name: card.querySelector('.cocktails__item__header').textContent,
+    description: card.querySelector('.cocktails__item__description').textContent,
+    imageSrc: card.querySelector('.cocktails__item__img').src,
+  };
+
+  const favorites = getFavorites();
+
+  if (!favorites.includes(cocktailData)) {
+      favorites.push(cocktailData);
+  }
+  saveFavorites(favorites);
+}
+
+
+
