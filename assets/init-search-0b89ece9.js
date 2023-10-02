@@ -8,7 +8,7 @@
 <h3 class="cocktails__item__header">${n.drink}</h3>
 <p class="cocktails__item__description">${n.description}</p>
 <div class="cocktails__btn__container">
-<button type="button" class="learnmore__btn">learn more</button>
+<button type="button" class="learnmore__btn" data-id="${n._id}">learn more</button>
 <button type="button"  class="svg__btn"> 
  <svg class="svg-heart">
 <use class="cocktails__svg add_favorites_js" href="./img/sprite.svg#icon-heart"></use>
