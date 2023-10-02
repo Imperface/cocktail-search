@@ -2,7 +2,6 @@
 
 import axios from 'axios';
 import { renderCocktailsList } from '../render/render-coctails-cards';
-import { renderCocktailsListModal } from '../render/render-coctails-cards'
 
 const BASE_URL = 'https://drinkify.b.goit.study/api/v1';
 
@@ -19,10 +18,7 @@ function getRequestRandomCocktails() {
     return firstReqAPI(renderingCardDependency())
       .then(data => {
         const cocktailsList = document.querySelector('.cocktails__list');
-        const cocktailsModal = document.querySelector('.js-modal-cocktails');//Modal TEST
         renderCocktailsList(data, cocktailsList);
-        renderCocktailsListModal(data, cocktailsModal);
-        //Modal TEST
       })
       .catch(error => {
         console.error(error.message);
