@@ -10,8 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/cocktail-search/assets/init-search-738eb4f8.js"></script>
-    <link rel="stylesheet" href="/cocktail-search/assets/init-search-3f9ccfff.css">
+    <script type="module" crossorigin src="/cocktail-search/assets/init-search-3fab5056.js"></script>
+    <link rel="stylesheet" href="/cocktail-search/assets/init-search-b0e1c286.css">
   </head>
   <body class="change-theme">
     <header class="header">
@@ -127,13 +127,15 @@
   <div class="container">
     <div class="container-letters"></div>
     <div class="search-input-container">
-      <input
-        id="search"
-        class="search-input"
-        placeholder="Search"
-        name="search"
-        type="text"
-      />
+      <form class="search-form">
+        <input
+          id="search"
+          class="search-input"
+          placeholder="Search"
+          name="search"
+          type="text"
+        />
+      </form>
       <svg class="icon-search change-theme">
         <use href="../img/sprite.svg#icon-search"></use>
       </svg>
@@ -143,8 +145,12 @@
 
     <section class="cocktails change-theme" id="cocktails">
   <div class="container">
-    <h2 class="search__title">Searching results</h2>
+    <h2 class="search__title">Cocktails</h2>
     <ul class="cocktails__list"></ul>
+    <div
+      class="pagination-elements visually-hidden"
+      id="pagination-elements"
+    ></div>
   </div>
 </section>
 
