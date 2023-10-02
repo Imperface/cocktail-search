@@ -1,4 +1,5 @@
 // написати функцію яка буде відмальовувати картки коктейлів. З файла user-screen-width-follower.js взяти кількість карток, які необхідно намалювати, відповідно до ширини екрану. В параметри функції буде приходити масив з об'єктами коктейлів та посилання на елемент в якому ці картки необхідно намалювати. Зробити іменований експорт цієї функції, для її перевикористання. у разі якщо довжина масиву більша за число карток, які можна намалювати, відповідно до ширини екрану, викликати функцію пагінації.Картки мають бути тегами li, тому що малюватись вони будуть в тезі ul
+<<<<<<< Updated upstream
 const cocktailsList = document.querySelector('.cocktails__list');
 const learnMoreBtn = document.querySelectorAll('.learnmore__btn');
 const svg = document.querySelectorAll('.cocktails__svg');
@@ -126,3 +127,5 @@ function renderFavorCocktailsList(favors) {
 
 
 
+=======
+>>>>>>> Stashed changes
