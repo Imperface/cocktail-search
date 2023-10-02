@@ -10,8 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/cocktail-search/assets/init-search-02348805.js"></script>
-    <link rel="stylesheet" href="/cocktail-search/assets/init-search-ad35af66.css">
+    <script type="module" crossorigin src="/cocktail-search/assets/init-search-6320af26.js"></script>
+    <link rel="stylesheet" href="/cocktail-search/assets/init-search-4d0d41c0.css">
   </head>
   <body class="change-theme">
     <header>
@@ -229,6 +229,35 @@
     </div>
   </div>
 </footer>
+
+    <section class="modal-cocktails is-hidden" data-modal id="modal-cocktails">
+  <div class="wrapper-modal-cocktails">
+    <button class="close-modal-cocktails" data-modal-close>
+      <svg class="svg-close-modal-cocktails" width="22" height="22">
+        <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-close"></use>
+      </svg>
+    </button>
+    <ul class="js-modal-cocktails list"></ul>
+    <div class="modal-cocktails-card-buttons">
+      <ul class="modal-cocktails-buttons list">
+        <li class="modal-cocktails-buttons-item">
+          <button type="button" class="modal-button modal-button-favorite">
+            ADD TO FAVORITE
+          </button>
+        </li>
+        <li class="modal-cocktails-buttons-item">
+          <button
+            type="button"
+            class="modal-button modal-button-back"
+            data-modal-close
+          >
+            BACK
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
     
   </body>
