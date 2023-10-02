@@ -10,8 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/cocktail-search/assets/init-search-b2d475c7.js"></script>
-    <link rel="stylesheet" href="/cocktail-search/assets/init-search-4d0d41c0.css">
+    <script type="module" crossorigin src="/cocktail-search/assets/init-search-5422b575.js"></script>
+    <link rel="stylesheet" href="/cocktail-search/assets/init-search-d277eda2.css">
   </head>
   <body class="change-theme">
     <header>
@@ -23,7 +23,7 @@
         <a href="#"
           >Favorite
           <svg class="chevron-down">
-            <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-chevron-down"></use>
+            <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-chevron-down"></use>
           </svg>
         </a>
         <ul class="submenu">
@@ -38,7 +38,7 @@
     <a class="logo-link" href="/index.html">
       <span class="logo-name">Drinkify</span>
       <svg class="logo-icon">
-        <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-cocktail"></use>
+        <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-cocktail"></use>
       </svg>
     </a>
   </div>
@@ -51,10 +51,74 @@
 
   <button class="menu-button" data-modal-open>
     <svg class="menu-burger" width="40" height="40">
-      <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-burger"></use>
+      <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-burger"></use>
     </svg>
   </button>
-  
+  <!-- не забути видалити цю кнопку -->
+<button data-modal-open class="burger-button" type="button">
+  <svg class="burger-svg">
+    <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-burger"></use>
+  </svg>
+</button>
+
+<!-- розмітка -->
+
+<div class="backdrop-header container is-hidden" data-modal>
+  <div class="head-mobile-div">
+    <div class="bbb">
+      <a class="mobile-menu-logo" href="./index.html"
+        >DRINKIFY<svg class="mobile-menu-icon">
+          <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-cocktail"></use>
+        </svg>
+      </a>
+    </div>
+
+    <div class="mobile-menu-buttons">
+      <!-- це імітація кнопки-перемикача теми -->
+      <!-- не забути видалити цю кнопку? -->
+
+      <button class="xxxxxxxxxxxxxxx" type="button">
+        <!-- <svg class="aaaaaaaaaaa">
+        <use href="./images/sprite.svg#icon-close-modal"></use>
+      </svg> -->
+      </button>
+
+      <button data-modal-close class="head-menu-close" type="button">
+        <svg class="head-menu-close-button">
+          <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="header-mobile-menu">
+    <div class="head-menu-list">
+      <a class="head-menu-item" href="./index.html">Home</a>
+    </div>
+
+    <div class="dropdown">
+      <div class="dropbtn-div">
+        <a class="dropbtn dropdown-trigger" href="#"
+          >Favorite<svg class="icon-chevron-down" width="24" height="24">
+            <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-chevron-down"></use></svg
+        ></a>
+      </div>
+      <!-- <button class="dropbtn dropdown-trigger">Favorite</button> -->
+      <div class="dropdown-content" id="myDropdown">
+        <div class="dropdown-menu-links">
+          <a href="#">Favorite cocktails</a>
+          <a href="#">Favorite ingredients</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <svg class="icon-star" width="391" height="391">
+      <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-7"></use>
+    </svg>
+  </div>
+</div>
+
 </header>
 
     <section class="favor-ingred">
@@ -70,7 +134,7 @@
       <a class="footer-link" href="/index.html">
         <span class="footer-logo">Drinkify</span>
         <svg class="footer-icon" >
-          <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-cocktail"></use>
+          <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-cocktail"></use>
         </svg>
       </a>
     </div>
@@ -80,21 +144,21 @@
         <li>
           <a href="https://www.facebook.com/goITclub/" target="_blank">
             <svg class="footer-social-icon">
-              <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-facebook"></use>
+              <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
         <li>
           <a href="https://www.instagram.com/goitclub/" target="_blank">
             <svg class="footer-social-icon">
-              <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-instagram"></use>
+              <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
         <li>
           <a href="https://www.youtube.com/c/GoIT" target="_blank">
             <svg class="footer-social-icon">
-              <use href="/cocktail-search/assets/sprite-49a72336.svg#icon-youtube"></use>
+              <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-youtube"></use>
             </svg>
           </a>
         </li>
