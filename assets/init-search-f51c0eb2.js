@@ -11,7 +11,7 @@
 <button type="button" class="learnmore__btn" data-id="${n._id}">learn more</button>
 <button type="button"  class="svg__btn"> 
  <svg class="svg-heart">
-<use class="cocktails__svg add_favorites_js" href="/img/sprite.svg#icon-heart"></use>
+<use class="cocktails__svg add_favorites_js" href="img/sprite.svg#icon-heart"></use>
 </svg>
 </button>
 </div> 
