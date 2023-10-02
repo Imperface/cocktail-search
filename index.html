@@ -10,8 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/cocktail-search/assets/init-search-95685dcb.js"></script>
-    <link rel="stylesheet" href="/cocktail-search/assets/init-search-646da23c.css">
+    <script type="module" crossorigin src="/cocktail-search/assets/init-search-738eb4f8.js"></script>
+    <link rel="stylesheet" href="/cocktail-search/assets/init-search-3f9ccfff.css">
   </head>
   <body class="change-theme">
     <header class="header">
@@ -30,86 +30,87 @@
       From classic sips to exotic mixes, we're your key to becoming a cocktail
       wizard!
     </p>
-    <button type="button" class="hero-button">view cocktails</button>
+    <a class="hero-button" href="#cocktails">view cocktails</a>
+    <!-- <button type="button"></button> -->
   </div>
   <div class="hero-right">
     <div class="background">
       <picture>
         <source
-          srcset="../img/hero/elements_desctop.png 1x"
+          srcset="/cocktail-search/assets/elements_desctop-201b7071.png 1x"
           media="(min-width: 1280px)"
         />
         <source
-          srcset="../img/hero/elements_tablet.png 1x"
+          srcset="/cocktail-search/assets/elements_tablet-ff567911.png 1x"
           media="(min-width: 768px)"
         />
         <source
-          srcset="../img/hero/elements_mobile.png 1x"
+          srcset="/cocktail-search/assets/elements_mobile-e22dc92b.png 1x"
           media="(min-width: 375px)"
         />
         <img
           class="hero-right-background1"
-          src="../img/hero/elements_desctop.png"
+          src="/cocktail-search/assets/elements_desctop-201b7071.png"
           alt=""
           ;
         />
       </picture>
       <picture>
         <source
-          srcset="../img/hero/rectangle725_desctop.png 1x"
+          srcset="/cocktail-search/assets/rectangle725_desctop-ec198342.png 1x"
           media="(min-width: 1280px)"
         />
         <source
-          srcset="../img/hero/rectangle725_tablet.png 1x"
+          srcset="/cocktail-search/assets/rectangle725_tablet-d2bd53d4.png 1x"
           media="(min-width: 768px)"
         />
         <source
-          srcset="../img/hero/rectangle725_mobile.png 1x"
+          srcset="/cocktail-search/assets/rectangle725_mobile-9098dd62.png 1x"
           media="(min-width: 375px)"
         />
         <img
           class="hero-right-background2"
-          src="../img/hero/rectangle725_desctop.png"
+          src="/cocktail-search/assets/rectangle725_desctop-ec198342.png"
           alt=""
           ;
         />
       </picture>
       <picture>
         <source
-          srcset="../img/hero/girl_desctop.png 1x"
+          srcset="/cocktail-search/assets/girl_desctop-2b847d00.png 1x"
           media="(min-width: 1280px)"
         />
         <source
-          srcset="../img/hero/girl_tablet.png 1x"
+          srcset="/cocktail-search/assets/girl_tablet-4a243c1b.png 1x"
           media="(min-width: 768px)"
         />
         <source
-          srcset="../img/hero/girl_mobile.png 1x"
+          srcset="/cocktail-search/assets/girl_mobile-c00d5f27.png 1x"
           media="(min-width: 375px)"
         />
         <img
           class="hero-right-background3"
-          src="../img/hero/girl_desctop.png"
+          src="/cocktail-search/assets/girl_desctop-2b847d00.png"
           alt=""
           ;
         />
       </picture>
       <picture>
         <source
-          srcset="../img/hero/elements_desctop_dark.png 1x"
+          srcset="/cocktail-search/assets/elements_desctop_dark-f6a4a284.png 1x"
           media="(min-width: 1280px)"
         />
         <source
-          srcset="../img/hero/elements_tablet_dark.png 1x"
+          srcset="/cocktail-search/assets/elements_tablet_dark-8bf9114a.png 1x"
           media="(min-width: 768px)"
         />
         <source
-          srcset="../img/hero/elements_mobile_dark.png 1x"
+          srcset="/cocktail-search/assets/elements_mobile_dark-1883d0b3.png 1x"
           media="(min-width: 320px)"
         />
         <img
           class="hero-right-background1_dark"
-          src="../img/hero/elements_desctop_dark.png"
+          src="/cocktail-search/assets/elements_desctop_dark-f6a4a284.png"
           alt=""
           ;
         />
@@ -124,11 +125,22 @@
 
     <section class="search">
   <div class="container">
-    <div class="container-letters">
+    <div class="container-letters"></div>
+    <div class="search-input-container">
+      <input
+        id="search"
+        class="search-input"
+        placeholder="Search"
+        name="search"
+        type="text"
+      />
+      <svg class="icon-search change-theme">
+        <use href="../img/sprite.svg#icon-search"></use>
+      </svg>
     </div>
-    <input id="search" class="search-input" name="search" type="text" />
   </div>
 </section>
+
     <section class="cocktails change-theme" id="cocktails">
   <div class="container">
     <h2 class="search__title">Searching results</h2>
