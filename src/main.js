@@ -7,8 +7,8 @@ import './js/user-screen-width-follower';
 import './js/fetch/get-random-cockt';
 import './js/render/render-coctails-cards';
 import './js/fetch/get-cocktails-by-search';
+import './js/element-pagination';
 import './js/modal/modal-cocktail';
 import './js/modal/modal-ingredient';
-import './js/element-pagination';
 
 import './js/init-search';
