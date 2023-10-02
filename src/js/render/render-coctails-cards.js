@@ -133,7 +133,12 @@ function addToFavorites(event) {
 
 
 
-export function renderCocktailsListModal(images, container) {
+export async function renderCocktailsListModal(images, container) {
+  for (let i = 0; i < images.length; i++)
+  {
+    console.log(images[i]._id)
+  }
+  
   container.innerHTML = images
     .map(
       image => `
@@ -169,4 +174,33 @@ export function renderCocktailsListModal(images, container) {
 `
     )
     .join('');
+  
+
+const modalOpenButtons = document.querySelectorAll('[data-modal-open]');
+const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+
+modalOpenButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modalId = button.dataset.modalOpen;
+    const modal = document.getElementById(modalId);
+    openModal(modal);
+  });
+});
+
+modalCloseButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('[data-modal]');
+    closeModal(modal);
+  });
+});
+
+function openModal(modal) {
+  modal.classList.remove('is-hidden');
 }
+
+function closeModal(modal) {
+  modal.classList.add('is-hidden');
+}
+  
+}
+

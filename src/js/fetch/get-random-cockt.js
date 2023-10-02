@@ -21,7 +21,8 @@ function getRequestRandomCocktails() {
         const cocktailsList = document.querySelector('.cocktails__list');
         const cocktailsModal = document.querySelector('.js-modal-cocktails');//Modal TEST
         renderCocktailsList(data, cocktailsList);
-        renderCocktailsListModal(data, cocktailsModal); //Modal TEST
+        renderCocktailsListModal(data, cocktailsModal);
+        //Modal TEST
       })
       .catch(error => {
         console.error(error.message);
