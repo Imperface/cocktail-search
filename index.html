@@ -10,124 +10,123 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     
-    <script type="module" crossorigin src="/cocktail-search/assets/init-search-77a3a529.js"></script>
-    <link rel="stylesheet" href="/cocktail-search/assets/init-search-c82700b5.css">
+    <script type="module" crossorigin src="/cocktail-search/assets/init-search-878d4a64.js"></script>
+    <link rel="stylesheet" href="/cocktail-search/assets/init-search-97a3597b.css">
   </head>
   <body class="change-theme">
-    <header>
-  <!--navigation-->
-  <nav>
-    <ul class="desktop-menu">
-      <li><a href="#">Home</a></li>
-      <li class="favorite">
-        <a href="#"
-          >Favorite
-          <svg class="chevron-down">
-            <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-chevron-down"></use>
-          </svg>
-        </a>
-        <ul class="submenu">
-          <li><a href="#">Favorite Cocktails</a></li>
-          <li><a href="#">Favorite Ingredients</a></li>
-        </ul>
-      </li>
-    </ul>
-  </nav>
-  <!--logo-->
-  <div class="logo">
-    <a class="logo-link" href="/index.html">
-      <span class="logo-name">Drinkify</span>
-      <svg class="logo-icon">
-        <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-cocktail"></use>
-      </svg>
-    </a>
-  </div>
-
-  <div class="menu-toggle">
-    <button class="btn-change-theme" id="js-btn-change-theme" type="button">
-      <div class="circle-change-theme"></div>
-    </button>
-  </div>
-
-  <button class="menu-button" data-modal-open>
-    <svg class="menu-burger" width="40" height="40">
-      <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-burger"></use>
-    </svg>
-  </button>
-  <!-- не забути видалити цю кнопку -->
-<button data-modal-open class="burger-button" type="button">
-  <svg class="burger-svg">
-    <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-burger"></use>
-  </svg>
-</button>
-
-<!-- розмітка -->
-
-<div class="backdrop-header container is-hidden" data-modal>
-  <div class="head-mobile-div">
-    <div class="bbb">
-      <a class="mobile-menu-logo" href="./index.html"
-        >DRINKIFY<svg class="mobile-menu-icon">
+    <header class="header">
+  <div class="container header-container">
+    <nav>
+      <ul class="desktop-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="favorite">
+          <a href="#"
+            >Favorite
+            <svg class="chevron-down">
+              <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-chevron-down"></use>
+            </svg>
+          </a>
+          <ul class="submenu">
+            <li><a href="favorite-cocktails.html">Favorite Cocktails</a></li>
+            <li>
+              <a href="favorite-ingredients.html">Favorite Ingredients</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!--logo-->
+    <div class="logo">
+      <a class="logo-link" href="index.html">
+        <span class="logo-name change-theme">Drinkify</span>
+        <svg class="logo-icon">
           <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-cocktail"></use>
         </svg>
       </a>
     </div>
 
-    <div class="mobile-menu-buttons">
-      <!-- це імітація кнопки-перемикача теми -->
-      <!-- не забути видалити цю кнопку? -->
-
-      <button class="xxxxxxxxxxxxxxx" type="button">
-        <!-- <svg class="aaaaaaaaaaa">
-        <use href="./images/sprite.svg#icon-close-modal"></use>
-      </svg> -->
-      </button>
-
-      <button data-modal-close class="head-menu-close" type="button">
-        <svg class="head-menu-close-button">
-          <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-close"></use>
-        </svg>
-      </button>
-    </div>
-  </div>
-
-  <div class="header-mobile-menu">
-    <div class="head-menu-list">
-      <a class="head-menu-item" href="./index.html">Home</a>
+    <div class="menu-toggle">
+      <button
+        class="btn-change-theme"
+        id="js-btn-change-theme"
+        type="button"
+      ></button>
     </div>
 
-    <div class="dropdown">
-      <div class="dropbtn-div">
-        <a class="dropbtn dropdown-trigger" href="#"
-          >Favorite<svg class="icon-chevron-down" width="24" height="24">
-            <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-chevron-down"></use></svg
-        ></a>
+    <button class="menu-button" data-modal-open>
+      <svg class="menu-burger change-theme" width="40" height="40">
+        <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-burger"></use>
+      </svg>
+    </button>
+    <!-- розмітка -->
+
+<div class="backdrop-header container is-hidden" data-modal>
+  <div class="container">
+    <div class="head-mobile-div">
+      <div class="bbb">
+        <a class="mobile-menu-logo" href="index.html"
+          >DRINKIFY<svg class="mobile-menu-icon">
+            <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-cocktail"></use>
+          </svg>
+        </a>
       </div>
-      <!-- <button class="dropbtn dropdown-trigger">Favorite</button> -->
-      <div class="dropdown-content" id="myDropdown">
-        <div class="dropdown-menu-links">
-          <a href="#">Favorite cocktails</a>
-          <a href="#">Favorite ingredients</a>
+
+      <div class="mobile-menu-buttons">
+        <div class="menu-toggle">
+          <button
+            class="btn-change-theme"
+            id="js-btn-change-theme"
+            type="button"
+          ></button>
+        </div>
+
+        <button data-modal-close class="head-menu-close" type="button">
+          <svg class="head-menu-close-button">
+            <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="header-mobile-menu">
+      <div class="head-menu-list">
+        <a class="head-menu-item" href="./index.html">Home</a>
+      </div>
+
+      <div class="dropdown">
+        <div class="dropbtn-div">
+          <a class="dropbtn dropdown-trigger" href="#"
+            >Favorite<svg class="icon-chevron-down" width="24" height="24">
+              <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-chevron-down"></use></svg
+          ></a>
+        </div>
+        <!-- <button class="dropbtn dropdown-trigger">Favorite</button> -->
+        <div class="dropdown-content" id="myDropdown">
+          <div class="dropdown-menu-links">
+            <a href="favorite-cocktails.html">Favorite cocktails</a>
+            <a href="favorite-ingredients.html">Favorite ingredients</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div>
-    <svg class="icon-star" width="391" height="391">
-      <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-7"></use>
-    </svg>
+    <div>
+      <svg class="icon-star" width="391" height="391">
+        <use href="/cocktail-search/assets/sprite-4a79d548.svg#icon-7"></use>
+      </svg>
+    </div>
   </div>
 </div>
 
+  </div>
 </header>
 
     <section class="hero">
   <div class="hero-left">
-    <h1 class="hero-title text_dark">
+    <h1 class="hero-title change-theme">
       A party without <span class="hero-cocktails">cocktails</span><br />
       is not like a party
     </h1>
-    <p class="hero-about text_dark">
+    <p class="hero-about change-theme">
       From classic sips to exotic mixes, we're your key to becoming a cocktail
       wizard!
     </p>
@@ -231,7 +230,7 @@
       <form class="search-form">
         <input
           id="search"
-          class="search-input"
+          class="search-input change-theme"
           placeholder="Search"
           name="search"
           type="text"
@@ -294,7 +293,11 @@
   </div>
 </footer>
 
-    <section class="modal-cocktails is-hidden" data-modal id="modal-cocktails">
+    <section
+  class="modal-cocktails change-theme is-hidden"
+  data-modal
+  id="modal-cocktails"
+>
   <div class="wrapper-modal-cocktails">
     <button class="close-modal-cocktails" data-modal-close>
       <svg class="svg-close-modal-cocktails" width="22" height="22">
