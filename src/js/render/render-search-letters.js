@@ -1,4 +1,6 @@
-//реалізувати відмалювання букв для пошуку по першій літері
+import SlimSelect from 'slim-select';
+import getCocktailsBySearch from '../fetch/get-cocktails-by-search';
+import { renderCocktailsList } from './render-coctails-cards';
 
 const lettersContainer = document.querySelector('.container-letters');
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
@@ -33,9 +35,33 @@ function renderSelect() {
   const options = arrayLetters.map(letter => {
     return `<option value="${letter}">${letter}</option>;`;
   });
-  selectLetters.insertAdjacentHTML('beforeend', options.join(''));
+  const optionsWithPlaceholder = [
+    '<option data-placeholder="true"></option>',
+    ...options,
+  ];
+  selectLetters.insertAdjacentHTML(
+    'beforeend',
+    optionsWithPlaceholder.join('')
+  );
   lettersContainer.innerHTML = '';
   lettersContainer.appendChild(selectLetters);
+
+  new SlimSelect({
+    select: selectLetters,
+    settings: {
+      showSearch: false,
+      openPosition: 'down',
+      placeholderText: 'A',
+    },
+    events: {
+      beforeChange: async ([newVal]) => {
+        const data = await getCocktailsBySearch(`f=${newVal.value}`);
+        renderCocktailsList(data);
+        isPaginationRequired(data);
+      },
+    },
+  });
+
   isButtons = false;
 }
 

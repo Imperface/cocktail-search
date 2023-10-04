@@ -11,7 +11,7 @@ const paginationRef = document.querySelector('#pagination-elements');
 const cocktailsTitle = document.querySelector('.search__title');
 const screenWidth = renderingCardDependency();
 lettersContainer.addEventListener('click', onButtonClick);
-lettersContainer.addEventListener('change', onSelectChange);
+// lettersContainer.addEventListener('change', onSelectChange);
 
 searchForm.addEventListener('submit', onChangeInput);
 async function isPaginationRequired(data) {
@@ -57,9 +57,9 @@ async function onButtonClick(event) {
   }
 }
 
-async function onSelectChange(event) {
-  if (event.target.tagName === 'SELECT') {
-    const data = await getCocktailsBySearch(`f=${event.target.value}`);
-    isPaginationRequired(data);
-  }
-}
+// async function onSelectChange(event) {
+//   if (event.target.tagName === 'SELECT') {
+//     const data = await getCocktailsBySearch(`f=${event.target.value}`);
+//     isPaginationRequired(data);
+//   }
+// }

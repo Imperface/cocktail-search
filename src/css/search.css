@@ -15,7 +15,7 @@
   border: 2px solid var(--color-accent);
   border-radius: 80px;
   margin: 0 auto;
-  padding-left: 30px;
+  padding-left: 42px;
   outline: none;
   transition: box-shadow var(--t-dur) var(--t-tf);
   background-color: transparent;
@@ -37,7 +37,7 @@
 .icon-search {
   fill: var(--l-m-dark);
   position: absolute;
-  left: 10px;
+  left: 14px;
   top: 14px;
   width: 16px;
   height: 16px;
@@ -60,7 +60,7 @@
 }
 
 .buton-letters:hover,
-.buton-letters.active {
+.buton-letters:active {
   background-color: var(--tab);
 }
 
@@ -76,14 +76,14 @@
   padding: 20px 0;
 }
 
-.letters-select {
+.letters-select.ss-main {
   display: block;
   width: 90px;
   height: 34px;
-
+  padding: 8px 14px;
   margin: 0 auto;
-  border: 1px solid var(--d-m-bg);
   border-radius: 8px;
+  border: none;
   background-color: rgba(126, 143, 221, 0.4);
   color: var(--white);
   font-size: 14px;
@@ -91,9 +91,15 @@
   line-height: 1.3;
 }
 
+.letters-select.ss-main:active,
+.letters-select.ss-main:hover {
+  background-color: var(--tab);
+}
+
 .is-hidden {
   display: none;
 }
+
 @media screen and (max-width: 767.98px) {
   .search {
     padding-top: 10px;

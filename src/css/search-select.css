@@ -1,0 +1,81 @@
+.ss-main .ss-values .ss-placeholder {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 0;
+}
+
+.ss-main {
+  position: relative;
+}
+
+.ss-main .ss-arrow {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+}
+
+.ss-main .ss-arrow path {
+  stroke: white;
+}
+
+.ss-content {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.ss-content.ss-open-below {
+  background-color: white;
+  padding: 8px;
+  height: 96px;
+  border: 1px solid var(--tab);
+  border-radius: 4px;
+  transform: translateY(8px);
+}
+
+.ss-main .ss-open-below {
+  background-color: var(--tab);
+}
+
+.ss-list::-webkit-scrollbar {
+  width: 3px;
+}
+
+.ss-list::-webkit-scrollbar-thumb {
+  background-color: var(--tab);
+  border-radius: 4px;
+}
+
+.ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+  color: black;
+  background-color: white;
+}
+
+.ss-content .ss-list .ss-option:hover {
+  color: black;
+  background-color: white;
+}
+
+/* dark mode style+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+.dark-mode .ss-content.ss-open-below {
+  background-color: #232330;
+}
+
+.dark-mode .ss-content .ss-list .ss-option {
+  color: white;
+}
+
+.dark-mode .ss-content .ss-list .ss-option.ss-highlighted,
+.ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
+  background-color: #232330;
+  color: white;
+}
+
+.dark-mode .ss-content .ss-list .ss-option:hover {
+  background-color: #232330;
+  color: white;
+}
