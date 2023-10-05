@@ -6,5 +6,5 @@ import './js/theme-changer';
 // import './js/modal/modal-ingredient';
 // import './js/render/render-modal-ingred';
 // import './js/element-pagination';
-import './js/favor-cockt';
-// import './js/init-search';
+import './js/favor-ingred';
+import './js/render/render-element-not-found';
