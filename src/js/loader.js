@@ -1,6 +1,6 @@
 export function showLoader(container) {
   const loader = document.createElement('div');
-  loader.className = 'loader';
+  loader.classList.add('loader');
   container.appendChild(loader);
 }
 
