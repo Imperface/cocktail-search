@@ -8,6 +8,7 @@ const lettersContainer = document.querySelector('.container-letters');
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 const arrayLetters = letters.split('');
 let isButtons;
+const cocktailsList = document.querySelector('.cocktails__list');
 
 addEventListener('resize', renderSearchLetters);
 
@@ -58,7 +59,7 @@ function renderSelect() {
     events: {
       beforeChange: async ([newVal]) => {
         const data = await getCocktailsBySearch(`f=${newVal.value}`);
-        renderCocktailsList(data);
+        renderCocktailsList(data, cocktailsList);
         isPaginationRequired(data);
       },
     },
