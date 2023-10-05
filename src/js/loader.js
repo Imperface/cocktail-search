@@ -1,10 +1,10 @@
-function showLoader(container) {
-  const loader = document.createElement('span');
+export function showLoader(container) {
+  const loader = document.createElement('div');
   loader.className = 'loader';
   container.appendChild(loader);
 }
 
-function hideLoader(container) {
+export function hideLoader(container) {
   const loader = container.querySelector('.loader');
   if (loader) {
     container.removeChild(loader);
