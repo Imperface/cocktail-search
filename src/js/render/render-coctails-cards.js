@@ -2,7 +2,7 @@
 import spriteUrl from '/img/sprite.svg';
 import { checkElemInLocStor } from '../check-elem-in-loc-stor';
 export function renderCocktailsList(images, container) {
-  container.innerHTML = images
+  document.querySelector('.cocktails__list').innerHTML = images
     .map(
       image => `
 <li class="cocktails__item change-theme" id = ${image._id}>
@@ -15,9 +15,10 @@ export function renderCocktailsList(images, container) {
 <button type="button" class="learnmore__btn"  data-modal-open="modal-cocktails" data-id="${
         image._id
       }">learn more</button>
-<button type="button" data-cocktId = "${
-        image._id
-      }"  class="svg__btn  ${checkElemInLocStor(image._id, 'favorites')}"> 
+<button type="button"  class="svg__btn  ${checkElemInLocStor(
+        image._id,
+        'favorites'
+      )}"> 
  <svg class="svg-heart">
 <use class="cocktails__svg add_favorites_js" href="${spriteUrl}#icon-heart"></use>
 </svg>

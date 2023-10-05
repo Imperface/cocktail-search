@@ -68,7 +68,7 @@ if (data.length > 0) {
 //   isPaginationRequired(data);
 // });
 
-function isPaginationRequired(data) {
+export function isPaginationRequired(data) {
   if (data.length === 0) {
     // заглушка
   } else if (data.length >= 6) {
